@@ -12,7 +12,7 @@ body {
 
 header {
     height: 100vh;
-    background: url(/images/main-background.png);
+    background: url(../images/main-background.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 40px;
