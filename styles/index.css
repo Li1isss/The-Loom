@@ -1,18 +1,33 @@
+@font-face {
+    font-family: Manrope-regular;
+    src: url(fonts/Manrope-Regular.ttf);
+}
+
+@font-face {
+    font-family: Manrope-bold;
+    src: url(fonts/Manrope-Bold.ttf);
+}
+
+@font-face {
+    font-family: PFDinTextPro-bold;
+    src: url(fonts/PFDinTextPro-Bold.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Manrope-regular;
 }
 
 body {
-    background: #d9e1ea;
+    background: #E8F2FF;
     color: #fff;
 }
 
 header {
     height: 100vh;
-    background: url(../images/main-background.png);
+    background: url(/images/main-background.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 40px;
@@ -27,9 +42,8 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    gap: 60px;
-    font-size: 18px;
-    opacity: 0.8;
+    gap: 100px;
+    font-size: 24px;
 }
 
 nav a {
@@ -37,143 +51,234 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover{
+    text-decoration: underline;
+}
+
 .hero {
-    margin-top: 150px;
+    margin-top: 220px;
 }
 
 .hero h1 {
-    font-size: 42px;
+    font-size: 80px;
+    font-family: PFDinTextPro-bold;
 }
 
 .hero p {
     margin-top: 10px;
-    font-size: 20px;
-    opacity: 0.8;
+    font-size: 48px;
 }
 
 .btn {
-    margin-top: 25px;
-    padding: 12px 30px;
-    background: #5c7f9f;
+    margin-top: 50px;
+    padding: 20px 60px;
+    background: #3E6187;
     border-radius: 25px;
     display: inline-block;
     color: white;
     text-decoration: none;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: #2d4f73;
 }
 
 .about {
-    padding: 80px 0;
+    margin-top: 80px;
     text-align: center;
     color: #2b2b2b;
 }
 
 .about h2 {
     margin-bottom: 40px;
+    font-family: PFDinTextPro-bold;
+    font-size: 48px;
 }
 
 .about-content {
-    width: 70%;
     margin: auto;
     position: relative;
+    display: flex;
+    justify-content: end;
 }
 
 .about-box {
     background: #4e6d8d;
     color: white;
-    padding: 30px;
+    padding: 90px 65px;
     border-radius: 15px;
-    width: 250px;
+    width: 500px;
     position: absolute;
     left: 0;
     top: 40px;
+    text-align: left;
+    font-size: 30px;
 }
 
-.about img {
-    width: 50%;
+.about-img {
+    width: 70%;
     border-radius: 20px;
 }
 
-/* CATALOG */
 .catalog {
-    background: #4e6d8d;
-    padding: 60px 0;
+    background: #E8F2FF;
+    margin-top: 60px;
     text-align: center;
+    height: 1950px;
 }
 
 .catalog h2 {
-    margin-bottom: 40px;
+    background: #3E6187;
+    padding: 40px 50px 140px 20px;
+    font-size: 48px;
+    font-family: PFDinTextPro-bold;
+}
+
+.catalog-block{
+    width: 60%;
+    padding: 60px 100px;
+    background: #14365C;
+    position: absolute;
+    left: 20%;
+    margin-top: -100px;
 }
 
 .catalog-grid {
-    width: 60%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+   
 }
 
 .card {
-    background: #2d4b6a;
-    border-radius: 10px;
     overflow: hidden;
 }
 
 .card img {
     width: 100%;
-    height: 150px;
+    height: 300px;
     object-fit: cover;
 }
 
 .card h3 {
     padding: 10px;
     text-align: left;
+    position: absolute;
+    margin-top: -70px;
+    font-size: 28px;
+    margin-left: 10px;
+    font-weight: 100;
 }
 
 .card-bottom {
     display: flex;
+    margin-top: 10px;
+    margin-bottom: 60px;
 }
 
 .price {
     flex: 1;
-    background: #6f91ac;
+    background: #6194AF;
     padding: 10px;
+    font-family: Manrope-bold;
+    border-radius: 25px 0 0 25px;
+    font-size: 28px;
 }
 
 .buy {
     flex: 1;
-    background: #4e6d8d;
+    background: #3E6187;
     padding: 10px;
+    border-radius: 0 25px 25px 0;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.more {
-    margin-top: 30px;
+.buy:hover{
+    background: #2d4f73;
 }
 
-/* CONTACT */
+.catalog-btn{
+    padding: 8px 60px;
+    background: #3E6187;
+    border-radius: 25px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+.catalog-btn:hover{
+    background: #2d4f73;
+}
+
 .contact {
     padding: 100px 0;
     text-align: center;
-    background: linear-gradient(135deg, #0e2a47, #163d63);
+    background: url(../images/form-background.png);
 }
 
 .contact h2 {
     margin-bottom: 30px;
+    font-family: PFDinTextPro-bold;
+    font-size: 48px;
 }
 
 .contact input {
     display: block;
     margin: 10px auto;
     padding: 12px;
-    width: 300px;
+    width: 500px;
     background: transparent;
     border: 1px solid #fff;
     color: #fff;
+    font-size: 20px;
+}
+
+.contact-btn{
+    margin-top: 60px;
+    padding: 8px 60px;
+    background: #3E6187;
+    border-radius: 25px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    transition: 0.3s;
+}
+
+.contact-btn:hover{
+    background: #2d4f73;
 }
 
 footer {
-    background: #1e3a56;
-    padding: 20px;
+    background: url(../images/footer-background.png);
+    padding: 50px 0;
+    font-size: 20px;
+    box-shadow: 0px -6px 15px 5px rgba(0, 0, 0, 0.25);
+}
+
+footer div{
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
+}
+
+.bg-sketch1{
+    position: absolute;
+    width: 18%;
+    right: 0;
+    z-index: -10;
+}
+
+.bg-sketch2{
+    position: absolute;
+    width: 18%;
+    left: 0;
+    z-index: -10;
+    transform: rotate(180deg);
 }
